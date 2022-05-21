@@ -1,19 +1,22 @@
 {
-  "name": "markov",
-  "version": "1.0.0",
-  "description": "",
-  "main": "makeText.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/thetonyalvarez/sec-31-05-testing-jest-node.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/thetonyalvarez/sec-31-05-testing-jest-node/issues"
-  },
-  "homepage": "https://github.com/thetonyalvarez/sec-31-05-testing-jest-node#readme"
+	"name": "markov",
+	"version": "1.0.0",
+	"description": "",
+	"main": "makeText.js",
+	"scripts": {
+		"test": "jest"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/thetonyalvarez/sec-31-05-testing-jest-node.git"
+	},
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/thetonyalvarez/sec-31-05-testing-jest-node/issues"
+	},
+	"homepage": "https://github.com/thetonyalvarez/sec-31-05-testing-jest-node#readme",
+	"dependencies": {
+		"jest": "^28.1.0"
+	}
 }
