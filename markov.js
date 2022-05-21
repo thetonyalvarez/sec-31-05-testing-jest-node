@@ -30,12 +30,32 @@ class MarkovMachine {
 				chains[word].push(words[i + 1]);
 			}
 		}
-		return chains;
+		this.chains = chains;
 	}
 
 	/** return random text from chains */
 
+	// need a helper function to randomize choice
+	static _getRandomKey(inputArr) {
+		return inputArr[Math.floor(Math.random() * inputArr.length)];
+	}
+
 	makeText(numWords = 100) {
-		// TODO
+		let chains = this.chains;
+		let result = [];
+
+		let words = Object.keys(chains);
+		let word = MarkovMachine._getRandomKey(words);
+
+		while (result.length < numWords && word !== null) {
+			result.push(word);
+			word = MarkovMachine._getRandomKey(words);
+		}
+		console.log(words);
+		console.log(word);
+		console.log(result.join(" "));
+		return result.join(" ");
 	}
 }
+
+module.exports = MarkovMachine;
