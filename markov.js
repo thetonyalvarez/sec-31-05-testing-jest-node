@@ -41,20 +41,24 @@ class MarkovMachine {
 	}
 
 	makeText(numWords = 100) {
-		let chains = this.chains;
-		let result = [];
+		try {
+			if (numWords > 0) {
+				let chains = this.chains;
+				let result = [];
 
-		let words = Object.keys(chains);
-		let word = MarkovMachine._getRandomKey(words);
+				let words = Object.keys(chains);
+				let word = MarkovMachine._getRandomKey(words);
 
-		while (result.length < numWords && word !== null) {
-			result.push(word);
-			word = MarkovMachine._getRandomKey(words);
+				while (result.length < numWords && word !== null) {
+					result.push(word);
+					word = MarkovMachine._getRandomKey(words);
+				}
+
+				return result.join(" ");
+			}
+		} catch (err) {
+			throw "Argument must be greater than 0.";
 		}
-		console.log(words);
-		console.log(word);
-		console.log(result.join(" "));
-		return result.join(" ");
 	}
 }
 
