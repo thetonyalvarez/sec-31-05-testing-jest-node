@@ -17,6 +17,7 @@
 	},
 	"homepage": "https://github.com/thetonyalvarez/sec-31-05-testing-jest-node#readme",
 	"dependencies": {
+		"axios": "^0.27.2",
 		"jest": "^28.1.0"
 	}
 }
